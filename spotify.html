@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify Bareng - JustYou</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/spotify.css">
+</head>
+<body>
+  <header class="app-header">
+    <h1>Spotify Bareng</h1>
+    <button id="logoutBtn" class="logout-btn">Logout</button>
+  </header>
+
+  <main class="spotify-container">
+    <!-- Search Song -->
+    <section class="search-section">
+      <h2>Cari Lagu</h2>
+      <form id="searchForm">
+        <input type="text" id="searchInput" placeholder="Masukkan judul lagu atau artis..." required>
+        <button type="submit" class="search-btn">Cari</button>
+      </form>
+      <div id="searchResults" class="search-results">
+        <p class="empty">Belum ada hasil pencarian</p>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- Play Together -->
+    <section class="now-playing">
+      <h2>Lagu yang Sedang Dimainkan</h2>
+      <div id="currentTrack" class="current-track">
+        <p class="empty">Belum ada lagu yang diputar</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Bottom Navigation -->
+  <nav class="bottom-nav">
+    <a href="home.html">🏠 Home</a>
+    <a href="status.html">📸 Status</a>
+    <a href="spotify.html" class="active">🎵 Spotify</a>
+    <a href="notes.html">📝 Notes</a>
+    <a href="memory.html">📔 Memory</a>
+    <a href="reminder.html">⏰ Reminder</a>
+  </nav>
+
+  <script src="js/main.js"></script>
+  <script src="js/spotify.js"></script>
+</body>
+</html>
