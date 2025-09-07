@@ -1,0 +1,66 @@
+/* status.css */
+.status-container {
+  padding: 20px;
+  margin-bottom: 70px; /* Space for bottom nav */
+}
+
+.new-status {
+  background: #fffafc;
+  border: 2px solid #ffd6e7;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.new-status form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.upload-btn {
+  padding: 10px;
+  border: none;
+  background-color: #ff80ab;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.upload-btn:hover {
+  background-color: #ff5c93;
+}
+
+.status-feed {
+  margin-top: 20px;
+}
+
+.status-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.status-card {
+  background: white;
+  border-radius: 15px;
+  padding: 10px;
+  border: 1px solid #ffc1d9;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.status-card img {
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+.status-card p {
+  margin: 8px 0 0;
+  font-size: 14px;
+}
+
+.empty {
+  color: #aaa;
+  text-align: center;
+}
