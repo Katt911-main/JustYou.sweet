@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JustYou - Login</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="min-h-screen flex flex-col justify-center items-center bg-cream relative">
+
+  <!-- Background teddy bear / Rilakkuma vibe -->
+  <div class="absolute inset-0 opacity-20">
+    <img src="images/rilakkuma-bg.png" class="w-full h-full object-cover" alt="Background">
+  </div>
+
+  <!-- Card -->
+  <div class="relative z-10 w-11/12 max-w-md bg-white rounded-3xl shadow-xl border-2 border-peach p-8">
+    <!-- Logo -->
+    <div class="flex flex-col items-center mb-6">
+      <img src="images/logo.png" alt="JustYou Logo" class="w-16 h-16 rounded-full shadow-lg mb-2">
+      <h1 class="text-3xl font-bold text-brown">JustYou</h1>
+      <p class="text-brown-light text-sm mt-1">A cozy private space for you & your partner 🧸</p>
+    </div>
+
+    <!-- Tabs -->
+    <div class="flex justify-center space-x-6 mb-6">
+      <button id="loginTab" class="tab-btn active">Login</button>
+      <button id="registerTab" class="tab-btn">Register</button>
+    </div>
+
+    <!-- Login Form -->
+    <form id="loginForm" class="space-y-4">
+      <input type="email" id="loginEmail" placeholder="Email"
+        class="input-field" required>
+      <input type="password" id="loginPassword" placeholder="Password"
+        class="input-field" required>
+      <button type="submit" class="btn-primary">Login</button>
+    </form>
+
+    <!-- Register Form -->
+    <form id="registerForm" class="space-y-4 hidden">
+      <input type="text" id="registerName" placeholder="Full Name"
+        class="input-field" required>
+      <input type="email" id="registerEmail" placeholder="Email"
+        class="input-field" required>
+      <input type="password" id="registerPassword" placeholder="Password"
+        class="input-field" required>
+      <button type="submit" class="btn-primary">Register</button>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <footer class="relative z-10 mt-8 text-center text-brown-light text-sm">
+    &copy; 2025 JustYou. Made with ❤️ by Vieqi & Rara.
+  </footer>
+
+  <!-- Script -->
+  <script src="js/main.js"></script>
+</body>
+  </html>
