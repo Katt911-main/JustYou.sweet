@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JustYou - Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="dashboard-container">
+    
+    <!-- Top Bar -->
+    <header class="top-bar">
+      <h1>JustYou</h1>
+      <button id="logoutBtn" class="logout-btn">Keluar</button>
+    </header>
+
+    <!-- Main Content -->
+    <main id="mainContent">
+      <div id="homeTab" class="tab-content active">
+        <h2>🏠 Home</h2>
+        <p>Upload foto permanen, like & komen di sini.</p>
+      </div>
+      <div id="statusTab" class="tab-content">
+        <h2>📸 Status</h2>
+        <p>Buat status sementara seperti WhatsApp.</p>
+      </div>
+      <div id="notesTab" class="tab-content">
+        <h2>📝 Notes</h2>
+        <p>Catat pengeluaran dan pemasukan kalian di sini.</p>
+      </div>
+      <div id="spotifyTab" class="tab-content">
+        <h2>🎵 Spotify</h2>
+        <p>Dengerin musik bareng, sinkronisasi playlist.</p>
+      </div>
+      <div id="memoryTab" class="tab-content">
+        <h2>🐻 Memory</h2>
+        <p>Buku kenangan foto per tahun.</p>
+      </div>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+      <button class="nav-btn active" data-target="homeTab">
+        <img src="images/icons/home.svg" alt="Home">
+        <span>Home</span>
+      </button>
+      <button class="nav-btn" data-target="statusTab">
+        <img src="images/icons/status.svg" alt="Status">
+        <span>Status</span>
+      </button>
+      <button class="nav-btn" data-target="notesTab">
+        <img src="images/icons/notes.svg" alt="Notes">
+        <span>Notes</span>
+      </button>
+      <button class="nav-btn" data-target="spotifyTab">
+        <img src="images/icons/spotify.svg" alt="Spotify">
+        <span>Spotify</span>
+      </button>
+      <button class="nav-btn" data-target="memoryTab">
+        <img src="images/icons/memory.svg" alt="Memory">
+        <span>Memory</span>
+      </button>
+    </nav>
+  </div>
+
+  <!-- Script -->
+  <script src="js/dashboard.js"></script>
+</body>
+          </html>
