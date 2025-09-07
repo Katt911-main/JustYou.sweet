@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Status - JustYou</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/status.css">
+</head>
+<body>
+  <header class="app-header">
+    <h1>Status</h1>
+    <button id="logoutBtn" class="logout-btn">Logout</button>
+  </header>
+
+  <main class="status-container">
+    <!-- Upload status baru -->
+    <section class="new-status">
+      <h2>Upload Status</h2>
+      <form id="statusForm">
+        <input type="file" id="statusImage" accept="image/*" required>
+        <textarea id="statusCaption" placeholder="Tulis caption..." required></textarea>
+        <button type="submit" class="upload-btn">Upload</button>
+      </form>
+    </section>
+
+    <hr>
+
+    <!-- Status teman / pasangan -->
+    <section class="status-feed">
+      <h2>Status Kamu & Pasangan</h2>
+      <div id="statusList" class="status-list">
+        <p class="empty">Belum ada status yang diupload.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Bottom Navigation -->
+  <nav class="bottom-nav">
+    <a href="home.html">🏠 Home</a>
+    <a href="status.html" class="active">📸 Status</a>
+    <a href="spotify.html">🎵 Spotify</a>
+    <a href="notes.html">📝 Notes</a>
+    <a href="memory.html">📔 Memory</a>
+    <a href="reminder.html">⏰ Reminder</a>
+  </nav>
+
+  <script src="js/main.js"></script>
+  <script src="js/status.js"></script>
+</body>
+</html>
