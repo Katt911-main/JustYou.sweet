@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>JustYou — Home</title>
+
+  <!-- Global + Components CSS (sudah ada sebelumnya) -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+
+  <!-- Page CSS -->
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+  <!-- Top bar (konsisten dengan dashboard) -->
+  <header class="top-bar">
+    <div class="top-left">
+      <img src="images/logo.png" alt="JustYou" class="logo-small">
+      <h1 class="brand">JustYou</h1>
+    </div>
+    <div class="top-right">
+      <a href="dashboard.html" class="btn-small">Dashboard</a>
+    </div>
+  </header>
+
+  <main class="container main-home">
+    <!-- Upload Card -->
+    <section class="card upload-card">
+      <h2 class="section-title">Bagikan momen</h2>
+      <form id="uploadForm">
+        <label class="file-label">
+          <input type="file" id="photoInput" accept="image/*" />
+          <span>Pilih foto</span>
+        </label>
+
+        <div id="previewWrap" class="preview-wrap hidden">
+          <img id="previewImg" alt="preview" class="preview-img">
+          <button type="button" id="removePreview" class="btn-small danger">Hapus</button>
+        </div>
+
+        <textarea id="captionInput" placeholder="Tulis caption... (opsional)" rows="2"></textarea>
+
+        <div class="row-between">
+          <small class="hint">Ukuran ideal: 1080x1080, JPG/PNG</small>
+          <button type="submit" class="btn">Upload</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Feed -->
+    <section class="feed" id="feed">
+      <!-- Posts akan di-render di sini oleh js -->
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 JustYou • Private for two ❤️</p>
+  </footer>
+
+  <!-- Script -->
+  <script src="js/photo.js"></script>
+</body>
+  </html>
