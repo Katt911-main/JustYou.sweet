@@ -1,40 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JustYou - Login</title>
-
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JustYou - Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+    </style>
 </head>
-<body class="min-h-screen flex flex-col justify-center items-center bg-cream relative">
-
-  <!-- Background teddy bear / Rilakkuma vibe -->
-  <div class="absolute inset-0 opacity-20">
-    <img src="images/rilakkuma-bg.png" class="w-full h-full object-cover" alt="Background">
-  </div>
-
-  <!-- Card -->
-  <div class="relative z-10 w-11/12 max-w-md bg-white rounded-3xl shadow-xl border-2 border-peach p-8">
-    <!-- Logo -->
-    <div class="flex flex-col items-center mb-6">
-      <img src="images/logo.png" alt="JustYou Logo" class="w-16 h-16 rounded-full shadow-lg mb-2">
-      <h1 class="text-3xl font-bold text-brown">JustYou</h1>
-      <p class="text-brown-light text-sm mt-1">A cozy private space for you & your partner 🧸</p>
+<body class="min-h-screen">
+    <div class="gradient-bg text-white py-6 px-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">JustYou</h1>
+            <div class="flex items-center space-x-4">
+                <button class="p-2 rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 transition">
+                    <i data-feather="bell"></i>
+                </button>
+                <div class="w-8 h-8 rounded-full bg-white bg-opacity-20"></div>
+            </div>
+        </div>
     </div>
 
-    <!-- Tabs -->
-    <div class="flex justify-center space-x-6 mb-6">
-      <button id="loginTab" class="tab-btn active">Login</button>
-      <button id="registerTab" class="tab-btn">Register</button>
+    <div class="container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Home Card -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden transition duration-300 card-hover" data-aos="fade-up">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="p-3 rounded-full bg-blue-100 text-blue-600 mr-4">
+                            <i data-feather="home" class="w-6 h-6"></i>
+                        </div>
+                        <h2 class="text-xl font-semibold">Home</h2>
+                    </div>
+                    <p class="text-gray-600">Upload foto permanen, like & komen di sini.</p>
+                    <button class="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+                        Explore
+                    </button>
+                </div>
+            </div>
+
+            <!-- Status Card -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden transition duration-300 card-hover" data-aos="fade-up" data-aos-delay="100">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="p-3 rounded-full bg-purple-100 text-purple-600 mr-4">
+                            <i data-feather="message-square" class="w-6 h-6"></i>
+                        </div>
+                        <h2 class="text-xl font-semibold">Status</h2>
+                    </div>
+                    <p class="text-gray-600">Buat status sementara seperti WhatsApp.</p>
+                    <button class="mt-4 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition">
+                        Create Status
+                    </button>
+                </div>
+            </div>
+
+            <!-- Notes Card -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden transition duration-300 card-hover" data-aos="fade-up" data-aos-delay="200">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="p-3 rounded-full bg-green-100 text-green-600 mr-4">
+                            <i data-feather="file-text" class="w-6 h-6"></i>
+                        </div>
+                        <h2 class="text-xl font-semibold">Notes</h2>
+                    </div>
+                    <p class="text-gray-600">Catat pengeluaran dan pemasukan kalian di sini.</p>
+                    <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">
+                        Add Note
+                    </button>
+                </div>
+            </div>
+
+            <!-- Spotify Card -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden transition duration-300 card-hover" data-aos="fade-up">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="p-3 rounded-full bg-red-100 text-red-600 mr-4">
+                            <i data-feather="music" class="w-6 h-6"></i>
+                        </div>
+                        <h2 class="text-xl font-semibold">Spotify</h2>
+                    </div>
+                    <p class="text-gray-600">Dengerin musik bareng, sinkronisasi playlist.</p>
+                    <button class="mt-4 px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">
+                        Connect
+                    </button>
+                </div>
+            </div>
+
+            <!-- Memory Card -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden transition duration-300 card-hover" data-aos="fade-up" data-aos-delay="100">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="p-3 rounded-full bg-yellow-100 text-yellow-600 mr-4">
+                            <i data-feather="book" class="w-6 h-6"></i>
+                        </div>
+                        <h2 class="text-xl font-semibold">Memory</h2>
+                    </div>
+                    <p class="text-gray-600">Buku kenangan foto per tahun.</p>
+                    <button class="mt-4 px-4 py-2 bg-yellow-600 text-white rounded-lg hover:bg-yellow-700 transition">
+                        View Memories
+                    </button>
+                </div>
+            </div>
+
+            <!-- Add more features card -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden transition duration-300 card-hover" data-aos="fade-up" data-aos-delay="200">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="p-3 rounded-full bg-gray-100 text-gray-600 mr-4">
+                            <i data-feather="plus" class="w-6 h-6"></i>
+                        </div>
+                        <h2 class="text-xl font-semibold">More Features</h2>
+                    </div>
+                    <p class="text-gray-600">Coming soon with more exciting features!</p>
+                    <button class="mt-4 px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition">
+                        Suggest Feature
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <!-- Bottom Navigation -->
+    <div class="fixed bottom-0 left-0 right-0 bg-white shadow-lg md:hidden">
+        <div class="flex justify-around items-center py-3">
+            <a href="#" class="flex flex-col items-center text-blue-600">
+                <i data-feather="home" class="w-6 h-6"></i>
+                <span class="text-xs mt-1">Home</span>
+            </a>
+            <a href="#" class="flex flex-col items-center text-gray-500">
+                <i data-feather="message-square" class="w-6 h-6"></i>
+                <span class="text-xs mt-1">Status</span>
+            </a>
+            <a href="#" class="flex flex-col items-center text-gray-500">
+                <i data-feather="music" class="w-6 h-6"></i>
+                <span class="text-xs mt-1">Music</span>
+            </a>
+            <a href="#" class="flex flex-col items-center text-gray-500">
+                <i data-feather="user" class="w-6 h-6"></i>
+                <span class="text-xs mt-1">Profile</span>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        AOS.init();
+        feather.replace();
+    </script>
+</body>
+                          </html>    </div>
 
     <!-- Login Form -->
     <form id="loginForm" class="space-y-4">
